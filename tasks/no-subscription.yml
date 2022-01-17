@@ -1,0 +1,9 @@
+
+- name: Remove No Subscription warning
+  ansible.builtin.replace:
+    dest: '/usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js'
+    replace: "void({title: gettext('No valid sub)"
+    regexp: "Ext.Msg.show\\(\\{\\stitle: gettext\\('No valid sub"
+    backup: true
+  notify:
+    - restart pveproxy

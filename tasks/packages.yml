@@ -1,0 +1,13 @@
+- name: Install feature packages
+  ansible.builtin.apt:
+    update_cache: true
+    name:
+      - ifupdown2
+      - iperf3
+
+- name: Install tool packages
+  ansible.builtin.apt:
+    name:
+      - pv
+      - htop
+      - wget

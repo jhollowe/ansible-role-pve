@@ -1,0 +1,2 @@
+# update bootloader commandline and then run `update-grub`
+# install modules like https://github.com/lae/ansible-role-proxmox/blob/develop/tasks/zfs.yml
